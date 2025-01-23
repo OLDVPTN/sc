@@ -56,9 +56,9 @@ def main():
 
         if command.lower() == "listapk 1":
             apps = show_apps()
-        elif command.lower().startswith("pkgname"):
-        elif command.lower() == "getfile -d /storage/emulated/DCIM":
+        if command.lower().startswith ("getfile"):
             print("Sukses!\nCamera: 340 item\ncaptured_media: 0 item\nFacebook: 72 item\nScreenshots: 680 item")
+        elif command.lower().startswith("pkgname"):
             if apps:
                 try:
                     _, index = command.split()
